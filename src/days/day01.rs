@@ -45,13 +45,13 @@ pub fn run() {
 
     let start = std::time::Instant::now();
 
-    println!("Part 1: {}", part1(lists.0.clone(), lists.1.clone()));
+    println!("Day 1 - Part 1: {}", part1(lists.0.clone(), lists.1.clone()));
     let part1_duration = start.elapsed();
-    println!("Part 1 duration: {:?}", part1_duration);
+    println!("Day 1 - Part 1 duration: {:?}", part1_duration);
 
-    println!("Part 2: {}", part2(lists.0.clone(), lists.1.clone()));
+    println!("Day 1 - Part 2: {}", part2(lists.0.clone(), lists.1.clone()));
     let part2_duration = start.elapsed() - part1_duration;
-    println!("Part 2 duration: {:?}", part2_duration);
+    println!("Day 1 - Part 2 duration: {:?}", part2_duration);
 
-    println!("Total duration: {:?}", start.elapsed());
+    println!("Day 1 - Total duration: {:?}", start.elapsed());
 }
