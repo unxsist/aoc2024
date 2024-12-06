@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, fs};
+use std::{collections::HashSet, fs};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 enum Direction {
@@ -119,7 +119,7 @@ fn part2() -> usize {
         visited.insert((pos, dir));
         state_history.push((pos, dir));
         
-        let max_steps = grid.len() * grid[0].len() * 4;
+        let max_steps = grid.len() * grid[0].len();
         
         for _ in 0..max_steps {
             let next_pos = match dir.move_forward(pos) {

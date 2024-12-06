@@ -1,13 +1,10 @@
 use std::{collections::{HashMap, HashSet}, fs};
 
-pub fn part1() -> i32 {
-    let input = fs::read_to_string("./src/input/day05.txt").expect("Failed to read input file");
-
-    let (rules, updates) = parse_input(&input);
+pub fn part1(rules: &HashMap<i32, HashSet<i32>>, updates: &Vec<Vec<i32>>) -> i32 {
     let mut total_middle_sum = 0;
 
-    for update in &updates {
-        if is_update_valid(&update, &rules) {
+    for update in updates {
+        if is_update_valid(&update, rules) {
             if let Some(middle) = find_middle(&update) {
                 total_middle_sum += middle;
             }
@@ -71,14 +68,11 @@ fn find_middle(update: &Vec<i32>) -> Option<i32> {
     }
 }
 
-pub fn part2() -> i32 {
-    let input = fs::read_to_string("./src/input/day05.txt").expect("Failed to read input file");
-
-    let (rules, updates) = parse_input(&input);
+pub fn part2(rules: &HashMap<i32, HashSet<i32>>, updates: &Vec<Vec<i32>>) -> i32 {
     let mut total_middle_sum = 0;
 
-    for update in &updates {
-        if !is_update_valid(&update, &rules) {
+    for update in updates {
+        if !is_update_valid(&update, rules) {
             let reordered = reorder_update(&update, &rules);
             if let Some(middle) = find_middle(&reordered) {
                 total_middle_sum += middle;
@@ -136,11 +130,14 @@ fn reorder_update(update: &Vec<i32>, rules: &HashMap<i32, HashSet<i32>>) -> Vec<
 pub fn run() {
     let start = std::time::Instant::now();
 
-    println!("Day 5 - Part 1: {}", part1());
+    let input = fs::read_to_string("./src/input/day05.txt").expect("Failed to read input file");
+    let (rules, updates) = parse_input(&input);
+
+    println!("Day 5 - Part 1: {}", part1(&rules, &updates));
     let part1_duration = start.elapsed();
     println!("Day 5 - Part 1 duration: {:?}", part1_duration);
 
-    println!("Day 5 - Part 2: {}", part2());
+    println!("Day 5 - Part 2: {}", part2(&rules, &updates));
     let part2_duration = start.elapsed() - part1_duration;
     println!("Day 5 - Part 2 duration: {:?}", part2_duration);
 
