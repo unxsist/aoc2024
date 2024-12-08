@@ -53,7 +53,7 @@ fn can_form_target_with_concat(target: i64, numbers: &Vec<i64>) -> bool {
         let mut result = numbers[0];
         let mut combination_index = combination;
 
-        for (i, &num) in numbers[1..].iter().enumerate() {
+        for (_i, &num) in numbers[1..].iter().enumerate() {
             let operator_type = combination_index % 3;
             combination_index /= 3;
 

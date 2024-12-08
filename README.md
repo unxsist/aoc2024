@@ -55,3 +55,11 @@ Part 1: 1.333ms
 Part 2: 2.073807s
 
 Total: 2.075142167s
+
+## Day 8
+
+Part 1: 417.667µs
+
+Part 2: 853.041µs
+
+Total: 1.273042ms
