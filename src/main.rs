@@ -10,4 +10,5 @@ pub fn main() {
     days::day07::run();
     days::day08::run();
     days::day09::run();
+    days::day10::run();
 }
