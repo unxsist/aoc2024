@@ -79,3 +79,11 @@ Part 1: 1.302458ms
 Part 2: 384.542µs
 
 Total: 1.688042ms
+
+## Day 11
+
+Part 1: 787.583µs
+
+Part 2: 17.638834ms
+
+Total: 18.428875ms
