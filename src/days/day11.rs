@@ -31,7 +31,7 @@ fn transform_stones(stones: HashMap<i64, i64>) -> HashMap<i64, i64> {
                 *new_stones.entry(left).or_insert(0) += count;
                 *new_stones.entry(right).or_insert(0) += count;
             } else {
-                *new_stones.entry((stone * 2024)).or_insert(0) += count;
+                *new_stones.entry(stone * 2024).or_insert(0) += count;
             }
         }
     }
