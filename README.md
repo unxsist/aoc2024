@@ -95,3 +95,11 @@ Part 1: 19.40875ms
 Part 2: 8.527792ms
 
 Total: 27.938375ms
+
+## Day 13
+
+Part 1: 1.494042ms
+
+Part 2: 6.708µs
+
+Total: 1.501833ms
