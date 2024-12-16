@@ -103,3 +103,11 @@ Part 1: 1.494042ms
 Part 2: 6.708µs
 
 Total: 1.501833ms
+
+## Day 14
+
+Part 1: 1.769416ms
+
+Part 2: Brute-Forced... :)
+
+Total: N/A
